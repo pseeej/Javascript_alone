@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head profile="http://www.w3.org/2005/10/profile">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팩토리얼 계산</title>
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png"> 
+</head>
+
+<body>
+    <script>
+        function fact(n) {
+            if (n <= 1) return n;
+            return n * fact(n - 1);
+        }
+
+        for (var i = 1; i < 10; i++){
+            //console.log(i + "! = " + fact(i)); 이렇게 하면 f12 콘솔에 쓰이고
+            document.write(i + "! = " + fact(i)+"<br />");   // 소괄호 안에 든 값을 html 문서의 body 요소 안에 출력. 마지막의 br로 줄바꿈 표시. \n은 안되네
+        }
+    </script>
+</body>
+
+</html>
