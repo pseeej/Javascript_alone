@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시각을 콘솔에 표시하기</title>
+    <script>
+        function displayTime(){
+            var d = new Date();
+            console.log("현재 시각은 "+d.toLocaleString() + " 입니다.");
+        }
+
+        // window 객체의 onload property에 함수 저장
+        // 이 함수는 웹 브라우저가 문서를 모두 읽어 들인 후에 실행됨
+        window.onload = function(){
+            // input 요소의 객체 가져오기
+            var button = document.getElementById("button");
+            // input 요소 클릭했을 때 동작하는 이벤트 처리기 등록
+            button.onclick = displayTime;
+        };
+    </script>
+</head>
+<body>
+    <input type="button" value="click" id="button">
+</body>
+</html>
