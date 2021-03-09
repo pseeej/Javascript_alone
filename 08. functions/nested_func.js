@@ -1,3 +1,5 @@
+// 중첩 함수
+
 function norm(x) {
     var sum2 = sumSquare();
     return Math.sqrt(sum2);
